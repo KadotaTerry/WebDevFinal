@@ -12,8 +12,20 @@ xhr.onload = function() {                       // When readystate changes
     // BUILD UP STRING WITH NEW CONTENT (could also use DOM manipulation)
     var newLine = '';
     for (var i = 0; i < responseObject.syllabusData.length; i++) { // Loop through object
-      newLine += '<b>' + responseObject.syllabusData[i].header + '</b><br/>';
-	  newLine += '<p>' + responseObject.syllabusData[i].summary + '</p>';
+	  newLine += '<b>' + responseObject.syllabusData[i].summary + '</b>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line1 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line2 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line3 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line4 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line5 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line6 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line7 + '</p>';
+	   newLine += '<b>' + responseObject.syllabusData[i].header2 + '</b>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line8 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line9 + '</p>';
+	  newLine += '<p>' + responseObject.syllabusData[i].line10 + '</p>';
+	  
+	  
     }
 
     // Update the page with the new content
