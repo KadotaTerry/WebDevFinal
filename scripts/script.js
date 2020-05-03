@@ -13,11 +13,8 @@ xhr.onload = function() {                       // When readystate changes
     var newLine = '';
     for (var i = 0; i < responseObject.syllabusData.length; i++) { // Loop through object
       responseObject.syllabusData[i].info + '" />';
-      newLine += '<p><b>' + responseObject.syllabusData[i].header1 + '</b><br>';
-      newLine += respnseObject.syllabusData[i].
-      newLine += '<p><b>'+ responseObject.syllabusData[i].info + '</b><br>';
-      newLine += responseObject.syllabusData[i].info + '</p>';
-      newLine += '</div>';
+      newLine += '<p><b>' + responseObject.syllabusData[i].header + '</b><br>';
+     
     }
 
     // Update the page with the new content
