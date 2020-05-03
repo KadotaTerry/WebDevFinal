@@ -12,16 +12,15 @@ xhr.onload = function() {                       // When readystate changes
     // BUILD UP STRING WITH NEW CONTENT (could also use DOM manipulation)
     var newLine = '';
     for (var i = 0; i < responseObject.syllabusData.length; i++) { // Loop through object
-      responseObject.syllabusData[i].info + '" />';
-      newLine += '<p><b>' + responseObject.syllabusData[i].header + '</b><br>';
-     
+      newLine += '<b>' + responseObject.syllabusData[i].header + '</b><br/>';
+	  newLine += '<p>' + responseObject.syllabusData[i].summary + '</p>';
     }
 
     // Update the page with the new content
-    document.getElementById('Content_area').innerHTML = newContent;
+    document.getElementById('helpme').innerHTML = newLine;
 
   //}
 };
 
-xhr.open('GET' , 'https://kadotaterry.github.io/WebDevFinal/syllabus.json', true);
+xhr.open('GET' , 'https://kadotaterry.github.io/WebDevFinal/data/syllabus.json', true);
 xhr.send(null);
